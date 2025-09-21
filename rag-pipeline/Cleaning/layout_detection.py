@@ -9,13 +9,13 @@ import boto3
 from botocore.exceptions import ClientError, BotoCoreError
 from PIL import Image
 from io import BytesIO
-
+from utilities import settings
 
 # =======================
 # CONFIG — EDIT THESE
 # =======================
-AWS_REGION = "eu-west-1"  # must match where the endpoint lives
-ENDPOINT_NAME = "legal-layout-serverless"  # exact endpoint name
+AWS_REGION = settings.AWS_REGION
+ENDPOINT_NAME = settings.LAYOUT_ENDPOINT_NAME
 THRESHOLD = 0.8
 # =======================
 
